@@ -1,0 +1,11 @@
+small: 
+  max-width: 600px
+  title, text, price, quantity, addtocart, big image, 2 image columns after the big image
+
+medium: 
+  max-width: 1440px
+  images on left, big image, 2 image columns after the big image
+  content on right, title, text, price, quantity, addtocart
+
+large:
+  same as medium, but 3 image columns after the big image
