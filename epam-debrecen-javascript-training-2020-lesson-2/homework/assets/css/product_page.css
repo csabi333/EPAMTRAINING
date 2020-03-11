@@ -27,5 +27,46 @@
     padding:2px;
 }
 
+/* add to cart wrapper*/
+
+.add-to-cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity-wrapper{
+   display:flex; 
+}
+
+.price{
+    padding: 15px;
+    background-color: #EDEDED;
+    color:#39c2d7;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    font-weight: bold;
+    padding:15px
+}
+
+.quantity-wrapper .cart{
+    
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right: 25px;
+    padding-left:25px;
+    
+    color:white;
+    background-color:#a3c644;
+    
+    display: flex;
+    align-items: center;
+}
 
 
+@media (max-width:600px){
+    
+}
