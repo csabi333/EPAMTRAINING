@@ -3,6 +3,7 @@
 .product-page {
     display:flex;
     justify-content:column;
+    padding-left:10px;
     
 }
 
@@ -54,8 +55,8 @@
 
 .quantity-wrapper .cart{
     
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:15px;
+    padding-bottom:15px;
     padding-right: 25px;
     padding-left:25px;
     
@@ -65,6 +66,22 @@
     display: flex;
     align-items: center;
 }
+
+
+/*tabet*/
+@media (max-width:1024px){
+    
+    .pictures{
+        width:120%;
+    }
+    .more-pictures img{
+        width:65%;
+    }
+    
+}
+
+
+
 
 /* mobile*/
 @media (max-width:600px){
