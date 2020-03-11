@@ -1,0 +1,31 @@
+/*images*/
+
+.product-page {
+    display:flex;
+    justify-content:column;
+    
+}
+
+.pictures{
+    padding-right:20px;
+    padding-top: 15px;
+    width: 50%;
+}
+
+.pictures img{
+    width:100%;
+}
+
+.more-pictures{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;  
+}
+
+.more-pictures img{
+    width:33%;
+    padding:2px;
+}
+
+
+
