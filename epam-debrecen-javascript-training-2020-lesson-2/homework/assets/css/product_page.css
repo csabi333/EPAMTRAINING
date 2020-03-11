@@ -66,7 +66,71 @@
     align-items: center;
 }
 
-
+/* mobile*/
 @media (max-width:600px){
+    .product-page{
+        flex-direction: column-reverse;
+        padding:10px;
+    }
+    
+    .quantity-wrapper{
+        display:block;
+    }
+    
+    .price{
+        height:45px;
+    }
+    
+    .add-to-cart-wrapper{
+        align-items:center;
+    }
+    
+    
+    .pictures{
+        width:100%;
+        align-items:center;
+        padding:0;
+        padding-top:15px;
+    }
+    
+    .more-pictures img{
+        width:40%;
+    }
+    
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
