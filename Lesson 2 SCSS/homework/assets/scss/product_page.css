@@ -1,0 +1,123 @@
+.product-page {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: column;
+      -ms-flex-pack: column;
+          justify-content: column;
+}
+
+.pictures {
+  padding: 15px;
+  width: 50%;
+}
+
+.pictures img {
+  width: 100%;
+}
+
+.more-pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.more-pictures img {
+  width: 33%;
+  padding: 2px;
+}
+
+.add-to-cart-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quantity-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price {
+  font-weight: bold;
+  padding: 15px;
+  background-color: #EDEDED;
+  color: #39c2d7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quantity {
+  font-weight: bold;
+  padding: 15px;
+}
+
+.quantity-wrapper .cart {
+  padding: 15px;
+  color: white;
+  background-color: #7f993a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .pictures {
+    width: 120%;
+  }
+  .more-pictures img {
+    width: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 10px;
+  }
+  .quantity-wrapper {
+    display: block;
+  }
+  .price {
+    height: 45px;
+  }
+  .add-to-cart-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pictures {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    padding-top: 15px;
+  }
+  .more-pictures img {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=product_page.css.map */
