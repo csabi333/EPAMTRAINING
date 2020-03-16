@@ -56,5 +56,21 @@ const middle = Math.floor((n*2-1)/2);
 
 }
 
+/*the solution without html: (not tested!)
+
+function pattern(h,direction){
+
+    switch(direction){
+    case left:
+        leftLeaning(h);
+    case right:
+        rightLeaning(h);
+    case center:
+        pyramid(h);
+    }
+
+}
+*/
+
 
 
