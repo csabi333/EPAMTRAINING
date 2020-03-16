@@ -1,0 +1,42 @@
+Homework #1:
+
+Given the following variables:
+
+var attrs = 'name age city gender';
+var values = [
+    ['Joe', 22, 'New York City', 'male'],
+    ['Jane', 85, 'Las Vegas', 'female'],
+    ['Jack', 55, 'London', 'male']
+];
+
+Build the following structure (not by hand):
+
+var people = [
+    {name: 'Joe', age: 22, city: 'New York City', gender: 'male'},
+    {name: 'Jane', age: 85, city: 'Las Vegas', gender: 'female'},
+    {name: 'Jack', age: 55, city: 'London', gender: 'male'},
+];
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+(Extra) Homework #2 (Optional)
+
+Write a JavaScript program to construct the following pattern, which takes the number of levels as parameter
+
+Function Input: 4
+
+Example output:
+
+*
+**
+***
+****
+
+Make it harder by accepting a 2nd parameter for the position of the asterisks (left, center or right)
+
+   *
+  ***
+ *****
+*******
