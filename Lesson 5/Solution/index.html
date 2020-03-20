@@ -1,24 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript: The Basics</title>
+    <script src="index.js"></script>
+</head>
+<body>
 <div id="app">
-  <form>
-    <div class="input-wrapper">
-        <p>Gender</p>
-        <label for="gender-male-input">male</label>
-        <input id="gender-male-input" type="radio" name="gender" value="male">
-        <label for="gender-female-input">female</label>
-        <input checked id="gender-female-input" type="radio" name="gender" value="female">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>First category</th>
+      <th>Number of pictures</th>
+      <th>Price</th>
+      <th>Quantity in stock</th>
+    </thead>
+    <tbody>
+      <!--
+        Here should be the data
+        You need to generate this with the DOM API :)
+      -->
+    </tbody>
+  </table>
+  <div class="product-details">
+    <!--
+      pro-tip: get the product-details with DOM, and somehow get its children, then use indexes so you can access all its children directly
+    -->
+    <p></p> <!-- name -->
+    <p></p> <!-- description -->
+    <div> <!-- categories -->
+      <!-- put paragraphs here (p) -->
     </div>
-    <div class="input-wrapper">
-        <label for="name-input">Name</label>
-        <input name="name" id="name-input">
+    <div>
+      <!-- image container -->
     </div>
-    <div class="input-wrapper">
-        <label for="email-input">Email:</label>
-        <input name="email" id="email-input">
-    </div>
-    <div class="input-wrapper">
-        <label for="maiden-name-input">maiden name</label>
-        <input name="maiden-name" id="maiden-name-input">
-    </div>
-    <button>Submit</button>
-  </form>
+    <p></p> <!-- price -->
+    <p></p> <!-- quantity -->
+  </div>
 </div>
+    </body>
+</html>

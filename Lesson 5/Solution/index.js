@@ -1,57 +1,34 @@
-// Import stylesheets
 import './style.css';
+const products = require('./products.json');
+console.log(products[0]);
 
-const form = document.querySelector('form');
-let gender = 'female';
+let table = document.querySelector("table");
+let data =Object.keys(products[0]);
 
-// - maiden name must be empty when gender is male
-// - name must be at least 2 words, each word starts with capital letter,
-//   and each of their length is more than 3 characters
-// - email must have <username>@<host>.hu format
-
-const radioButtons = document.querySelectorAll('input[type="radio"]');
-for(let radioButton of radioButtons) {
-  radioButton.addEventListener('change', function() {
-    gender = radioButton.value
-  });
-}
-
-function isMaidenNameValid() {
-  if(gender === 'male') {
-    const maidenNameInput = document.getElementById('maiden-name-input');
-    return maidenNameInput.value === '' || maidenNameInput.value == null;
-  }
-  return true
-}
-
-function isNameValid() {
-  const nameInput = document.getElementById('name-input');
-  const names = nameInput.value.split(' ');
-  if(names.length < 2) {
-    return false;
-  }
-  for(let name of names) {
-    if(name[0].toUpperCase() !== name[0] || name.length < 4) {
-      return false;
+function generateTable(table,data){
+  for(let element of data){
+    let row =table.insertRow();
+    for(let key in element){
+      switch(key){
+      case '_id': break;
+      case 'description':break;
+      case 'categories':
+                        let cell = row.insertCell();
+                        let text = document.createTextNode(element[key][0]);
+                        cell.appendChild(text);
+                        break;
+      case 'images':
+                    let cell = row.insertCell();
+                    let text = document.createTextNode(element[key].length);
+                    cell.appendChild(text);
+                    break;
+      default:
+              let cell = row.insertCell();
+              let text = document.createTextNode(element[key]);
+              cell.appendChild(text);
+      }
     }
   }
-  return true;
 }
 
-function isEmailValid() {
-  const emailInput = document.getElementById('email-input');
-  return emailInput.value.match(/\w+@\w+\.hu/);
-}
-
-form.addEventListener('submit', function(event) {
-  if(!isMaidenNameValid() || !isNameValid() || !isEmailValid()) {
-    alert('hibás adat');
-    event.preventDefault();
-    return;
-  }
-  const thankYouParagraph = document.createElement('p');
-  const nameInput = document.getElementById('name-input');
-  thankYouParagraph.innerText = 'Thank You, ' + nameInput.value;
-  form.parentElement.appendChild(thankYouParagraph);
-  form.parentElement.removeChild(form);
-});
+generateTable(table,products);

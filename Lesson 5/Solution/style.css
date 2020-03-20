@@ -1,4 +1,45 @@
-.input-wrapper {
-  padding: 20px 10px;
-  border: 1px solid black;
+h1, h2 {
+  font-family: Lato;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  flex: 1 0 auto;
+  border-spacing: 0;
+  overflow: auto;
+}
+
+tbody tr:hover {
+  background-color: darkslategray;
+  color: lightblue;
+  cursor: pointer;
+}
+
+.product-details {
+  max-height: 100vh;
+  overflow: auto;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.product-details *:nth-child(4) { /* image container */
+  max-height: 300px;
+  overflow: auto;
 }
