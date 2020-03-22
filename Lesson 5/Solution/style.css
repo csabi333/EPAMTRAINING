@@ -3,11 +3,12 @@ h1, h2 {
 }
 
 body {
-  overflow: hidden;
+  
   height: 100vh;
   width: 100vw;
   padding: 0;
   margin: 0;
+  background-color: #464547
 }
 
 #app {
@@ -18,15 +19,30 @@ body {
   height: 100%;
 }
 
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #39C2D7;
+  color: white;
+  text-align: center;
+  border:1px solid;
+}
+
 table {
   flex: 1 0 auto;
   border-spacing: 0;
   overflow: auto;
+  margin: 50px;
+  text-align: center;
+  color:white;
+  background-color:#8f8f8f;
+  box-shadow: 5px 5px 5px black;
+  border:1px solid;
 }
 
 tbody tr:hover {
-  background-color: darkslategray;
-  color: lightblue;
+  background-color: #464547;
   cursor: pointer;
 }
 
@@ -36,7 +52,7 @@ tbody tr:hover {
   flex-shrink: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+
 }
 
 .product-details *:nth-child(4) { /* image container */
