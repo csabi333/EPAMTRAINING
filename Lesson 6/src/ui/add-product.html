@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Simple Ecom Application</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-push-2">
+                <form class="form-horizontal" method="post" action="http://localhost:3000/api/products" name="product" id="product">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Add new product</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">Name</label>
+                            <div class="col-md-4">
+                                <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Description</label>
+                            <div class="col-md-4">
+                                <input id="description" name="description" type="text" placeholder="Description" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="quantity">Quantity</label>
+                            <div class="col-md-4">
+                                <input id="quantity" name="quantity" type="text" placeholder="Quantity" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="price">Price</label>
+                            <div class="col-md-4">
+                                <input id="price" name="price" type="text" placeholder="Price" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="categories">Categories</label>
+                            <div class="col-md-4">
+                                <input id="categories" name="categories" type="text" placeholder="Categories" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="images">Images</label>
+                            <div class="col-md-4">
+                                <input id="images" name="images" type="text" placeholder="Images" class="form-control input-md">
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

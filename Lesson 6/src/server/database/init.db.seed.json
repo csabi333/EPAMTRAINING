@@ -1,0 +1,23 @@
+// https://www.json-generator.com/
+
+[
+  '{{repeat(20, 50)}}',
+  {
+    _id: '{{objectId()}}',
+    name: function (tags) {
+      var _name = tags.lorem(tags.integer(2, 5), "words");
+      return _name.charAt(0).toUpperCase() + _name.slice(1);
+    },
+    description: '{{lorem(1, "paragraphs")}}',
+    categories: [
+      '{{repeat(1,3)}}',
+      '{{random("Cellphones & Accessories", "Cameras & Photo", "Computers & Tablets", "Vehicle Electronics & GPS", "TV, Audio & Surveillance", "Video Games & Consoles")}}'
+    ],
+    images: [
+      '{{repeat(1,5)}}',
+      'https://placeimg.com/640/480/tech'
+    ],
+    price: '{{floating(0.1, 2499, 2)}}',
+    quantity: '{{integer(0,10)}}'
+  }
+]

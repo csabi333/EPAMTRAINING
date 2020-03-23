@@ -1,0 +1,134 @@
+.button {
+    background-color: #7f993a;
+    padding: 17px 25px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #8fad40;
+}
+
+/* Product items style */
+
+.product-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-item {
+    padding: 4px;
+}
+
+.product-item:hover .product-item-wrapper {
+    border-color: #222222;
+}
+
+.product-item-wrapper {
+    position: relative;
+    border: 1px solid #CCCCCC;
+    margin: 2px;
+    padding: 6px;
+}
+
+.product-item-wrapper:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.product-item img {
+    box-sizing: border-box;
+    height: auto;
+    max-width: 100%;
+    width 100%;
+}
+
+.product-item .title {
+    color: #474747;
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    word-wrap: break-word;
+}
+
+.product-item .price {
+    float: left;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.product-item .cart {
+    padding: 10px 8px;
+    text-transform: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    float: right;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.product-item .cart > i {
+    margin-right: 8px;
+}
+
+.product-item .wishlist {
+    height: 36px;
+    width: 32px;
+    background-color: #464547;
+    position: absolute;
+    top: -1px;
+    left: 6px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-item .wishlist .fa-star {
+    color: #39C2D7;
+    font-size: 1em;
+}
+
+/* Styles for tablet and desktop layouts */
+
+@media screen and (min-width: 601px) {
+    .product-item .wishlist {
+        height: 55px;
+        width: 45px;
+    }
+
+    .product-item .wishlist .fa-star {
+        font-size: 1.5em;
+    }
+}
+
+/* Styles for tablet layout only */
+
+@media screen and (min-width: 601px) and (max-width: 1040px) {
+    .product-item {
+        width: 50%;
+    }
+}
+
+/* Styles for desktop layout only */
+
+@media screen and (min-width: 1041px) {
+    .product-item {
+        width: 33.33333%;
+    }
+}
+
+/* Styles for wide desktop layout */
+
+@media screen and (min-width: 1399px) {
+    .product-item {
+        width: 25%;
+    }
+}

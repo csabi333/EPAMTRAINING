@@ -1,0 +1,12 @@
+# NodeJS Modules
+node_modules
+
+# IDE Specific
+.idea/
+
+# Generated
+db
+
+# Logs
+logs/
+*.log
