@@ -13,9 +13,7 @@ var indexPageController = (function(ProductService, ProductSearchParameters){
     var searchForm = document.querySelector('.index-page nav .search form');
     //search input
     var searchInput = document.querySelector('.index-page nav .search form input');
-    //categories filter
-    var filters = document.getElementsByClassName('filters')[0].childNodes[3]; //the li of the filters
-    //recent category list
+    //url of the categories array
     var categoryListUrl = '/api/products/categories';
 
     function updateFilters(){
@@ -25,6 +23,7 @@ var indexPageController = (function(ProductService, ProductSearchParameters){
             }).then(function(categoriesArray){
                for (let i=0;i<categoriesArray.length;i++){
                    generateFilter(categoriesArray[i])
+
                }
             });
     }
@@ -34,8 +33,16 @@ var indexPageController = (function(ProductService, ProductSearchParameters){
         let a =document.createElement("a");
         a.setAttribute("href","#");
         a.appendChild(document.createTextNode(category));
+        a.addEventListener("click",filterProducts);//if i put category in the called function it already gets called without clicking
         li.appendChild(a);
-        filters.appendChild(li);
+        categories.appendChild(li);
+
+        function filterProducts(){  //had to put it here because it was easier to use category in this scope
+            searchParameters.category = category;
+            searchProduct(searchParameters);
+            searchParameters.category = null;// we set back the category to null to let the search work even after we filtered by category
+            //but the search will parse all the products this way
+        }
     }
 
     function initialize(){
