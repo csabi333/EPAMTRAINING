@@ -11,7 +11,7 @@ var header = (function(profileService) {
     }
 
     var _fetchProfile = function(user) {
-        return profileService.fetchProfile().then(function(profile) {
+        return ProfileService.fetchProfile().then(function(profile) {
             user.innerHTML = `
                 <div class="data">
                     <div class="name">${profile.name}</div>
@@ -34,4 +34,4 @@ var header = (function(profileService) {
         template: template
     };
 
-})(ProfileService);
+})(profileService);

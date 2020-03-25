@@ -19,7 +19,7 @@ var _awaiter = function(generator) {
     });
 }
 
-function* generator() {
+function generator() {
     var response = yield fetch('https://jsonplaceholder.typicode.com/users/1');
     var json = yield response.json();
     console.log(json);

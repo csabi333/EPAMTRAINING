@@ -10,7 +10,7 @@ var main = (function(profileService, postService, commentService) {
     }
 
     var fetchPosts = function(top, skip) {
-        return profileService.fetchProfile()
+        return ProfileService.fetchProfile()
             .then(function(profile) {
                 return profile.id;
             })

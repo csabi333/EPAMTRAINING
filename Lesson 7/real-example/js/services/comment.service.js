@@ -1,6 +1,6 @@
 var CommentService = (function(http) {
 
-    fetchComments = function(postId, top, skip) {
+     function fetchComments (postId, top, skip) {
         var params = {
             postId: postId,
             _limit: top || 4,
@@ -15,3 +15,12 @@ var CommentService = (function(http) {
     };
 
 })(http);
+
+/*
+class CommentService{
+fetchComments (postId,top,skip){
+return http.get(`https://jsonplaceholder.typicode.com/comments?${http.getQueryString(postId+"40")}`);
+};
+}
+*/
+
