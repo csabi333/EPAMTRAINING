@@ -1,0 +1,78 @@
+#field {
+    position: relative;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid black;
+}
+
+.horse {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transform: scale(-1, 1);
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.horse.fallen {
+    transform: scale(-1, 1) rotate(-10deg);
+}
+
+.place-1,
+.place-2,
+.place-3,
+.winner {
+    /* https://stackoverflow.com/questions/3012899/is-there-a-box-shadow-color-property */
+    --box-shadow-color: rgba(10,255,10, 0.4);
+    border: 1px solid green;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 var(--box-shadow-color);
+    animation: pulse 2s infinite;
+}
+
+.place-1 {
+    --box-shadow-color: gold;
+}
+
+.place-2 {
+    --box-shadow-color: silver;
+}
+
+.place-3 {
+    --box-shadow-color: #cd7f32;
+}
+
+.horse.fallen::before,
+.horse.fallen::after {
+    content: "";
+    position: absolute;
+    height: 32px;
+    width: 4px;
+    top: 0;
+    background-color: red;
+    left: 50%;
+}
+
+.horse.fallen::after {
+    transform: rotate(45deg);
+}
+.horse.fallen::before {
+    transform: rotate(-45deg);
+}
+
+/* https://codepen.io/igorsheg/pen/MBpwGw */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--box-shadow-color);
+    }
+    70% {
+        box-shadow: 0 0 0 10px var(--box-shadow-color);
+    }
+    100% {
+        box-shadow: 0 0 0 0 var(--box-shadow-color);
+    }
+}
