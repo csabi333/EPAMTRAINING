@@ -1,0 +1,25 @@
+{
+  "node": true,
+  "esversion": 6,
+  "bitwise": true,
+  "maxdepth": 4,
+  "sub": true,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "browser": true,
+  "newcap": false,
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "console": true,
+    "angular": true,
+    "Logger": true,
+    "moment": true,
+    "sprintf": true,
+    "_": true
+  }
+}
