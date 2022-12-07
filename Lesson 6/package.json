@@ -12,9 +12,9 @@
     "author": "Daniel Koos, Diana Deregi",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.18.2",
+        "body-parser": "^1.20.1",
         "config": "^1.26.2",
-        "express": "^4.16.1",
+        "express": "^4.18.2",
         "less-middleware": "^2.2.1",
         "nedb": "^1.8.0",
         "node-persist": "^2.1.0",
